@@ -1,0 +1,11 @@
+runtime: python39
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /.*
+  script: auto
+  
+env_variables:
+  SQLALCHEMY_DATABASE_URI: 'sqlite:////C:\Users\Administrator\Downloads\simple-braille-main\site.db'

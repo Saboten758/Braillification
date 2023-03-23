@@ -1,0 +1,63 @@
+{%extends "layouts.html"%}
+{%block he%}       
+        <title>PasswordReset-BrailleHeads</title>   
+{% endblock he %}
+
+{%block content%}
+<br />
+<div class="container">
+    <div class="row row-content align-items-center">
+        <div class="col-lg-6 col-sm-9 mx-auto">
+            <div class="card">
+                <div class="card-body" style="background-color: #1c1c44;">
+                    <form method="POST" action="">
+                        {{form.hidden_tag()}}
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4" style="color: #FFF" ><strong>Reset Password!</strong></legend>
+                            <div class="form-group" style="color: #FFF">
+                                {{form.password.label(class="form-control-label")}}
+
+                                {%if form.password.errors%}
+                                    {{form.password(class="form-control form-control-lg is-invalid")}}
+                                    <div class="invalid-feedback">
+                                        {%for error in form.password.errors%}
+                                            <span>{{error}}</span>
+                                        {%endfor%}
+                                    </div>
+                                {%else%}
+                                    {{form.password(class="form-control form-control-lg")}}
+                                {%endif%}
+
+                            </div>
+                            <br/>
+                            <div class="form-group" style="color: #FFF">
+                                {{form.confirm_password.label(class="form-control-label")}}
+
+                                {%if form.confirm_password.errors%}
+                                    {{form.confirm_password(class="form-control form-control-lg is-invalid")}}
+                                    <div class="invalid-feedback">
+                                        {%for error in form.confirm_password.errors%}
+                                            <span>{{error}}</span>
+                                        {%endfor%}
+                                    </div>
+                                {%else%}
+                                    {{form.confirm_password(class="form-control form-control-lg")}}
+                                {%endif%}
+
+                            </div>
+                            <br/>
+                        <div class="text-center form-group">
+                            {{form.submit(class="btn btn-outline-info")}}
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="border-top pt-3 container">
+
+</div>
+{%endblock content%}

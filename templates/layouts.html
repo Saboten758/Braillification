@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css" integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block he%}{% endblock %}
+    </head>
+    <body style="background-color: #FFD700;">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            {%if current_user.is_authenticated%}
+                <a class="navbar-brand" href="{{url_for('home')}}">Braille Heads</a>
+            {%else%}
+                <a class="navbar-brand" href="{{url_for('reg')}}">Braille Heads</a> 
+            {%endif%}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                      {%if current_user.is_authenticated%}
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                        </li>
+                      {%endif%}
+                      <li class="nav-item">
+                      <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="mailto:sahel22.vis@gmail.com?subject=My%20Email%20Subject&body=Hi%20Sahel,">Contact Us</a>
+                      </li>
+                  </ul>
+                <div class="col-lg">
+                    <ul class="navbar-nav ml-auto justify-content-end order-2 order-lg-1">
+                        {%if current_user.is_authenticated%}
+                            <li class="nav-item mr-auto">
+                              <a class="nav-link" href="{{url_for('home')}}">{{current_user.username}}</a>
+                            </li>
+                            <li class="nav-item mr-auto">
+                              <a class="nav-link" href="{{url_for('lout')}}">Logout</a>
+                            </li>
+                        {%else%}
+                            <li class="nav-item mr-auto">
+                                <a class="nav-link" href="{{url_for('log')}}">Login</a>
+                            </li>
+                            <li class="nav-item mr-auto">
+                                <a class="nav-link" href="{{url_for('reg')}}">Sign Up</a>
+                            </li>
+                        {%endif%}
+                        
+                    </ul>
+                </div>
+            </div>
+          </nav>
+
+          {% with messages = get_flashed_messages(with_categories=true) %}
+		      {% if messages %}
+			      {% for category,message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{message}}
+                        </div>  
+			      {% endfor %}
+		      {% endif %}
+	      {% endwith %}
+
+          {% block content %}{% endblock %}
+          
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #1c1c44; color:#FFF">
+                  <h5 class="modal-title">Braille Heads</h5>
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                </div>
+                <div style="background-color: #FFD700;">
+                  <div class="modal-body">
+                    <p>We Are Braille Heads. Always assisting the Blind!</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-6 col-md-4">
+                <div class="card shadow-sm mb-4" style="background-color: #1c1c44;">
+                  <div class="card-body text-center">
+                    <h5 class="card-title" style="color: #FFF;">Contact Us</h5>
+                    <p class="card-text" style="color: #FFF;">Connect with us on social media</p>
+                    <div class="d-flex justify-content-around">
+                      <a href="#" class="btn btn-primary btn-lg"><i class="fab fa-facebook fa-lg"></i></a>
+                      <a href="#" class="btn btn-info btn-lg" ><i class="fab fa-twitter fa-lg"></i></a>
+                      <a href="https://wa.me" class="btn btn-success btn-lg" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <style>
+            .close {
+              padding: 20;
+              background-color: transparent;
+              border: 0;
+              position: auto;
+              top: 0;
+              right: 0;
+            }
+          
+            .close:focus {
+              outline: none;
+            }
+          
+            .close > span {
+              font-size: 1.5rem;
+              color: #fff;
+            }
+          </style>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      </body>
+</html>
