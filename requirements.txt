@@ -14,7 +14,7 @@ fpdf==1.7.2
 greenlet==2.0.2
 gTTS==2.3.1
 idna==3.4
-itsdangerous==2.1.2
+itsdangerous==2.0.1
 Jinja2==3.1.2
 MarkupSafe==2.1.2
 PyMuPDF==1.21.1
