@@ -35,13 +35,10 @@ To use the app, follow these steps:
 2. Wait for the app to recognize the text in the PDF.
 3. Choose whether you want to convert the text to Braille or sound.
 4. Click the corresponding button ("Download Braille" or "Play Sound").
-  
-<h3>Team Members:</h3>
-1. Sahel Bej</br>
-  [sahel22.vis@gmail.com]</br>
-2. Debjit Daw</br>
-  [debjitdaw03@gmail.com]</br>
-3. Snahanku Karar</br>
-  [ayankarar67131@gmail.com]</br>
-4. Priyanshu</br>
-  [priyanshubirpur@gmail.com]</br>
+
+<h3>TEAM MEMBERS</h3>
+
+1. Sahel Bej  sahel22.vis@gmail.com
+2. Debjit Daw  debjitdaw03@gmail.com
+3. Snahanku Karar ayankarar67131@gmail.com
+4. Priyanshu  priyanshubirpur@gmail.com
