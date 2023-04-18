@@ -1,6 +1,8 @@
 <h1> BRAILLIFICATION(PDF to Braille and Sound Converter)</h1><br/>
-<b>This is a Flask based web app that allows you to convert text from written PDF files to Braille and sound formats. The app translates the text in the PDF files into Braille and sound representations. The Braille output can be downloaded as a .pdf file, and the sound output can be downlaoded as mp3.</b></br>
-This app is useful for individuals with visual impairments who rely on Braille to read and communicate. By converting written PDF files into Braille and sound formats, the app provides greater accessibility to important documents, such as books, manuals, and educational materials. The app can also be used by sighted individuals who want to learn Braille or listen to the text in a document.</br>
+<b>
+This is a Flask based web app that allows you to convert text from written PDF files to Braille and sound formats. The app translates the text in the PDF files into Braille and sound representations. The Braille output can be downloaded as a .pdf file, and the sound output can be downloaded as mp3.</b></br>
+This app is useful for individuals with visual impairments who rely on Braille to read and communicate. By converting written PDF files into Braille and sound formats, the app provides greater accessibility to important documents, such as books, manuals, and educational materials. The app can also be used by sighted individuals who want to learn Braille or listen to the text in a document.
+</br>
 This project is made for the Solution Challenge 2023 organised by google to work on build a solution to a local problem using Google technologies, in accordance with one or more of the <b>United Nations 17 Sustainable Development Goals</b>. We have made this project under the goal of 'Quality Education', where our solution can raise the standard of education for visually impaired students.</br>
 
 <h3>DEMO</h3>
