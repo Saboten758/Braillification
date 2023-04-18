@@ -4,7 +4,7 @@ This app is useful for individuals with visual impairments who rely on Braille t
 This project is made for the Solution Challenge 2023 organised by google to work on build a solution to a local problem using Google technologies, in accordance with one or more of the <b>United Nations 17 Sustainable Development Goals</b>. We have made this project under the goal of 'Quality Education', where our solution can raise the standard of education for visually impaired students.</br>
 
 <h3>DEMO</h3>
-  you can try demo of this project in https://metal-segment-373811.uc.r.appspot.com/</br>
+  you can try demo of this project at: https://metal-segment-373811.uc.r.appspot.com/</br>
 
 <h3>INSTALLATION</h3>
 
